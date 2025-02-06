@@ -135,7 +135,7 @@ export function ChatBox({ chatId }: { chatId?: string }) {
 
     startTransition(async () => {
       try {
-        const response = await fetch("https://10.10.3.141:4001/api/query1", {
+        const response = await fetch("http://10.10.3.141:4001/api/query1", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
