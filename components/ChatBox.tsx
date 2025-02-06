@@ -1,4 +1,4 @@
-
+  
 "use client";
 
 import { useState, useEffect, useRef, useTransition } from "react";
@@ -59,7 +59,9 @@ const formatContent = (content: string) => {
   });
 };
 
-
+function generateid(){
+  return Math.floor(Math.random()*1e6)+Date.now();
+}
 export function ChatBox({ chatId }: { chatId?: string }) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -142,7 +144,7 @@ export function ChatBox({ chatId }: { chatId?: string }) {
           },
           body: JSON.stringify({
             query: input,
-            chatId: chatId || "1",
+            chatId: chatId || generateid().toString(),
             chat_history: messages.map((msg) => `${msg.role}:${msg.content}`),
           }),
         });
