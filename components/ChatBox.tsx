@@ -72,7 +72,10 @@ export function ChatBox({ chatId }: { chatId?: string }) {
   const [isTyping, setIsTyping] = useState(false);
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
-
+  const getEmailId=()=>{
+    return session?.user?.email??"";
+  }
+  const emilId=getEmailId();
   useEffect(() => {
     if (chatId) {
       startTransition(async () => {
@@ -144,7 +147,7 @@ export function ChatBox({ chatId }: { chatId?: string }) {
           },
           body: JSON.stringify({
             query: input,
-            chatId: chatId || generateid().toString(),
+            chatId:  emilId? emilId : generateid().toString(),
             chat_history: messages.map((msg) => `${msg.role}:${msg.content}`),
           }),
         });
