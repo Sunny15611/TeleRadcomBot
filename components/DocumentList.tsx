@@ -45,7 +45,7 @@ const DocumentList: React.FC<DocumentListProps> = ({ Documents }) => {
     );
     const documentNumberMatch = documentNumberPart.match(/TS \d+\.\d+/);
     if (documentNumberMatch) {
-      const documentKey = documentNumberMatch[0].replace("TS", "TS").replace(" ", "+");
+      const documentKey = documentNumberMatch[0].replace("TS", "3GPP+TS").replace(" ", "+");
       return `https://sunny3ggp123.s3.ap-south-1.amazonaws.com/${documentKey}`;
     }
     return "";
