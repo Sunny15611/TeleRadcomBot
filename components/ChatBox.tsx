@@ -141,7 +141,6 @@ export function ChatBox({ chatId }: { chatId?: string }) {
     startTransition(async () => {
       try {
         const response = await fetch("https://fe2a-103-147-138-252.ngrok-free.app/api/query1", {
-          mode: 'no-cors',
           method: "POST",
           headers: {
             "Content-Type": "application/json",
