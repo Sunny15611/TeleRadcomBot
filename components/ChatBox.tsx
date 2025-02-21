@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { User, Bot, Copy, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { fetchMessages, savemessage, sendMessage } from "@/app/actions/chat";
-
+import FeedbackDialog from "./FeedbackDialog";
 import ImageDialog from "./ImageDialog";
 import { PaperAirplaneIcon } from '@heroicons/react/24/solid';
 
@@ -264,6 +264,7 @@ export function ChatBox({ chatId }: { chatId?: string }) {
                   <DocumentList Documents={message.Documents}/>
                   </div>
                 )}
+                 {message.role === "assistant" && <FeedbackDialog message_id={message.id} />}
               </div>
               <button
                 onClick={() => copyToClipboard(message.content, message.content)}
