@@ -1,5 +1,3 @@
-## AI TelecomeBot is Live you can try using it
-https://tele-radcom-bot.vercel.app/
 
 
 
