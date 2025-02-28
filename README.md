@@ -15,7 +15,7 @@ AI TelecomeBot is built using [Next.js](https://nextjs.org/) and is fully optimi
   - Frontend: Next.js (React-based framework)
   - Backend: Node.js with APIs for efficient data processing
   - Database: Optimized storage for telecom-specific data
-  - AI Processing: Uses LLM-based retrieval and response generation
+  - AI Processing: Uses Our Own Finetuned Model (LLAM3.2:3B)  LLM-based retrieval and response generation
 - **3GPP-Compliant Answers:** Provides precise responses based on 3GPP telecom standards and technical documentation.
 - **Diagram Recognition & Interpretation:** Unlike generic AI chatbots, TelecomeBot can process and retrieve relevant call flow and state diagrams.
 - **Memory-Persistent Conversations:** Maintains context over multiple user queries for more coherent responses.
