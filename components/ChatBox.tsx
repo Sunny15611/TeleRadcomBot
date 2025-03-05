@@ -140,7 +140,7 @@ export function ChatBox({ chatId }: { chatId?: string }) {
 
     startTransition(async () => {
       try {
-        const response = await fetch("https://dc82-103-147-138-252.ngrok-free.app/api/query1", {
+        const response = await fetch("https://deed-103-147-138-252.ngrok-free.app/api/query1", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
