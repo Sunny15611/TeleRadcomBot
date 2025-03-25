@@ -65,7 +65,7 @@ const ImageDialog: React.FC<ImageDialogProps> = ({ imageData, content }) => {
             onClick={() => handleImageClick(image)}
           >
             <Image
-              src={image.metadata.image_path ? `/diagrams/${image.metadata.image_path.split('/').pop()}` : ""}
+              src={image.metadata.image_path ? `/all_images/${image.metadata.image_path}` : ""}
 
                            alt={image.metadata.description}
               width={200}
@@ -82,7 +82,7 @@ const ImageDialog: React.FC<ImageDialogProps> = ({ imageData, content }) => {
             <div className="w-1/2 h-full relative">
               {selectedImage && (
                 <Image
-                src={selectedImage.metadata.image_path ? `/diagrams/${selectedImage.metadata.image_path.split('/').pop()}` : ""}
+                src={selectedImage.metadata.image_path ? `/all_images/${selectedImage.metadata.image_path}` : ""}
                  alt={selectedImage.metadata.description || "No description available"}
                   layout="fill"
                   objectFit="contain"
